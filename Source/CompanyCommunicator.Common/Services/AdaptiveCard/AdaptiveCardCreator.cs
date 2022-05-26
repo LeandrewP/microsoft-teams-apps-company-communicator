@@ -51,8 +51,8 @@ namespace Microsoft.Teams.Apps.CompanyCommunicator.Common.Services.AdaptiveCard
             var version = new AdaptiveSchemaVersion(1, 0);
             AdaptiveCard card = new AdaptiveCard(version);
 
-            string imgHeader = "https://4e6m34g22ybsg.blob.core.windows.net/media/ccheader.png?sp=r&st=2022-02-28T08:10:13Z&se=2025-02-28T16:10:13Z&spr=https&sv=2020-08-04&sr=b&sig=uWL%2F%2FkWkiGM4RrBJN9lEdKGOmWkQQ9rLrLTiGYW3Uxk%3D";
-            string imgFooter = "https://4e6m34g22ybsg.blob.core.windows.net/media/ccfooter.png?sp=r&st=2022-02-28T08:09:12Z&se=2025-02-28T16:09:12Z&spr=https&sv=2020-08-04&sr=b&sig=aQmHL9BE5Ph3Xx6vWwFvi5r3hslbxpOLMP6ktBBfO7M%3D";
+            string imgHeader = "https://ijpogufqf45cy.blob.core.windows.net/headerfooter/ccheader.png?sp=r&st=2022-05-26T21:05:29Z&se=2023-06-13T05:05:29Z&spr=https&sv=2020-08-04&sr=b&sig=O0e0JbgY3iCYDH4gzW%2BQkl9Ljvmn%2Ffkv0ktsXURR9oU%3D";
+            string imgFooter = "https://ijpogufqf45cy.blob.core.windows.net/headerfooter/ccfooter.png?sp=r&st=2022-05-26T21:02:01Z&se=2023-04-05T05:02:01Z&spr=https&sv=2020-08-04&sr=b&sig=%2B9OkMGfLv5zg3iR1VEES%2Fy1jxab5b6g7BQDu4bpWGBA%3D";
 
             card.Body.Add(new AdaptiveImage()
             {
