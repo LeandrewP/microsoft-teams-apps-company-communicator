@@ -51,10 +51,22 @@ namespace Microsoft.Teams.Apps.CompanyCommunicator.Common.Services.AdaptiveCard
             var version = new AdaptiveSchemaVersion(1, 0);
             AdaptiveCard card = new AdaptiveCard(version);
 
+            string imgHeader = "https://4e6m34g22ybsg.blob.core.windows.net/media/ccheader.png?sp=r&st=2022-02-28T08:10:13Z&se=2025-02-28T16:10:13Z&spr=https&sv=2020-08-04&sr=b&sig=uWL%2F%2FkWkiGM4RrBJN9lEdKGOmWkQQ9rLrLTiGYW3Uxk%3D";
+            string imgFooter = "https://4e6m34g22ybsg.blob.core.windows.net/media/ccfooter.png?sp=r&st=2022-02-28T08:09:12Z&se=2025-02-28T16:09:12Z&spr=https&sv=2020-08-04&sr=b&sig=aQmHL9BE5Ph3Xx6vWwFvi5r3hslbxpOLMP6ktBBfO7M%3D";
+
+            card.Body.Add(new AdaptiveImage()
+            {
+                Url = new Uri(imgHeader, UriKind.RelativeOrAbsolute),
+                Spacing = AdaptiveSpacing.Default,
+                Size = AdaptiveImageSize.Stretch,
+                AltText = string.Empty,
+            });
+
             card.Body.Add(new AdaptiveTextBlock()
             {
                 Text = title,
                 Size = AdaptiveTextSize.ExtraLarge,
+                HorizontalAlignment = AdaptiveHorizontalAlignment.Center,
                 Weight = AdaptiveTextWeight.Bolder,
                 Wrap = true,
             });
@@ -99,6 +111,14 @@ namespace Microsoft.Teams.Apps.CompanyCommunicator.Common.Services.AdaptiveCard
                     Url = new Uri(buttonUrl, UriKind.RelativeOrAbsolute),
                 });
             }
+
+            card.Body.Add(new AdaptiveImage()
+            {
+                Url = new Uri(imgFooter, UriKind.RelativeOrAbsolute),
+                Spacing = AdaptiveSpacing.Default,
+                Size = AdaptiveImageSize.Stretch,
+                AltText = string.Empty,
+            });
 
             return card;
         }
